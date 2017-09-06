@@ -1,0 +1,12 @@
+﻿  sensor.temperatureandhumidity_0_0:
+    friendly_name: Humidity
+  sensor.temperatureandhumidity_0_1:
+    friendly_name: Temperature
+  switch.relay_2_2:
+    friendly_name: Asztali lámpa
+  media_player.tv_ue43ku6000:
+    friendly_name: Samsung TV
+  media_player.samsung_6_series_43_ue43ku6000:
+    hidden: true
+  media_player.plex_web_chrome:
+    hidden: true

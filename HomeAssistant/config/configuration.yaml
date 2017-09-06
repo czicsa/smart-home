@@ -1,0 +1,103 @@
+﻿homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Albérlet
+  # Location required to calculate the time the sun rises and sets
+  latitude: 48.1036
+  longitude: 20.7412
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 101
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/Budapest
+  customize: !include customize.yaml
+
+# Show links to resources in log and frontend
+#introduction:
+
+# Enables the frontend
+frontend:
+
+
+# Enables configuration UI
+config:
+
+http:
+  # Uncomment this to add a password (recommended!)
+  api_password: ******
+  # Uncomment this if you are using SSL or running in Docker etc
+  # base_url: example.duckdns.org:8123
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+
+#turn on full logging
+#logger:
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+#camera
+camera:
+  - platform: generic
+    still_image_url: http://live.onlinecamera.net/207szegedomtereredetimeret.jpg
+
+#sensor
+sensor system:
+  - platform: systemmonitor
+    resources:
+      - type: disk_free
+        arg: C:/
+      - type: disk_free
+        arg: D:/
+      - type: disk_free
+        arg: G:/
+      - type: disk_free
+        arg: H:/
+sensor plex:
+  - platform: plex
+    host: 127.0.0.1
+    port: 32400
+    username: czicsa
+    password: ******
+
+device_tracker:
+  - platform: tplink
+    host: 192.168.0.1
+    username: ******
+    password: ******
+    interval_seconds: 10
+    consider_home: 180
+
+mysensors:
+  gateways:
+    - device: 'COM3'
+      persistence_file: 'C:/Users/czics/AppData/Roaming/.homeassistant/mysensors.json'
+      baud_rate: 9600
+  optimistic: false
+  persistence: true
+  retain: true
+  version: 2.1
+
+# Text to speech
+tts:
+  platform: google
+
+group: !include groups.yaml
+automation: !include automations.yaml

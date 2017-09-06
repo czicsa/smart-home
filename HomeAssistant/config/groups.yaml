@@ -1,0 +1,40 @@
+﻿default_view:
+    name: "Global"
+    icon: mdi:home 
+    entities:
+      - group.living_room
+      - group.kitchen
+living_room:
+    name: Nappali
+    view: yes
+    entities:
+      - group.computer
+      - group.living_room_switches
+      - group.living_other
+
+living_room_switches:
+    name: Nappali kapcsolók
+    entities:
+      - switch.relay_2_2
+
+computer:
+    name: Számítógép
+    entities:
+      - sensor.disk_free_c
+      - sensor.disk_free_d
+      - sensor.disk_free_g
+      - sensor.disk_free_h
+      - sensor.plex
+
+living_other:
+    name: Egyéb
+    entities:
+      - sun.sun
+      - media_player.tv_ue43ku6000
+      - sensor.temperature_1_1
+
+kitchen:
+    name: Konyha
+    view: yes
+    entities:
+      - camera.generic_camera
