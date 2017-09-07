@@ -16,6 +16,7 @@ living_room_switches:
     name: Nappali kapcsolók
     entities:
       - switch.relay_2_2
+      - switch.led_strip_3_3
 
 computer:
     name: Számítógép
