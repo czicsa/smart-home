@@ -98,14 +98,13 @@ void setup()
     while (1);
   }
 
-  sleep(UPDATE_INTERVAL);
 }
 
 
 void loop()      
 {
   
-  float temperature = (bmp.readTemperature() - 3);
+  float temperature = (bmp.readTemperature() - 4.95);
   send(msgTemp.set(temperature, 1));
 
   #ifdef MY_DEBUG
