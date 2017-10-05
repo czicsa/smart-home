@@ -105,7 +105,7 @@ void setup()
 void loop()      
 {
   
-  float temperature = bmp.readTemperature();
+  float temperature = (bmp.readTemperature() - 3);
   send(msgTemp.set(temperature, 1));
 
   #ifdef MY_DEBUG
