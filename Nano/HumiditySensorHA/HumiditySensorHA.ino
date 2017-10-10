@@ -45,9 +45,9 @@
 #define DHT_DATA_PIN 16
 
 #define BMP_SCK 5
-#define BMP_MISO 4
-#define BMP_MOSI 3 
-#define BMP_CS 2
+#define BMP_MOSI 4 
+#define BMP_CS 3
+#define BMP_MISO 2
 
 
 // Set this offset if the sensor has a permanent small offset to the real temperatures
