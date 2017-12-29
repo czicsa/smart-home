@@ -63,7 +63,7 @@ static const uint64_t UPDATE_INTERVAL = 200000;
 // i.e. the sensor would force sending an update every UPDATE_INTERVAL*FORCE_UPDATE_N_READS [ms]
 static const uint8_t FORCE_UPDATE_N_READS = 10;
 
-#define MY_NODE_ID 1
+#define MY_NODE_ID 4
 #define CHILD_ID_TEMP 1
 
 float lastTemp;
